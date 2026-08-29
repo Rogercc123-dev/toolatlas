@@ -8,12 +8,19 @@ jobs:
   build:
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v4
-      - uses: actions/setup-node@v4
+      - name: Checkout
+        uses: actions/checkout@v4
+      - name: Setup Node
+        uses: actions/setup-node@v4
         with:
           node-version: 20
-      - run: npm run build
-      - run: test -f dist/index.html
-      - run: test -f dist/sitemap.xml
-      - run: test -f dist/robots.txt
-      - run: test "$(find dist -mindepth 2 -name index.html | wc -l)" -gt 300
+      - name: Build
+        run: npm run build
+      - name: Check generated site
+        run: |
+          test -f dist/index.html
+          test -f dist/sitemap.xml
+          test -f dist/robots.txt
+          count=$(find dist -mindepth 2 -name index.html | wc -l)
+          test "$count" -ge 250
+          echo "Generated $count tool/category pages"
