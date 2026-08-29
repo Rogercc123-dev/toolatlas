@@ -1,1 +1,1 @@
-{"name":"toolatlas","version":"1.0.0","private":true,"scripts":{"build":"node scripts/build.js && node scripts/add-analytics.js && node scripts/seo-finish.js && node scripts/ui-finish.js"},"engines":{"node":">=18"}}
+{"name":"toolatlas","version":"1.0.0","private":true,"scripts":{"build":"node scripts/build.js && node scripts/add-analytics.js && node scripts/seo-finish.js"},"engines":{"node":">=18"}}
