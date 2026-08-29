@@ -1,1 +1,1 @@
-{"name":"toolatlas","version":"1.0.0","private":true,"scripts":{"build":"node scripts/build2.js && node scripts/fix-runtime.js"},"dependencies":{},"devDependencies":{}}
+{"name":"toolatlas","version":"1.0.0","private":true,"scripts":{"build":"node scripts/build2.js && node scripts/fix-runtime.js && node scripts/add-home.js"},"dependencies":{},"devDependencies":{}}
